@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Chat</class>
+ <widget class="QMainWindow" name="Chat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="chat_screen">
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="choose_chief">
+        <property name="toolTip">
+         <string>Choisir le chef du village et lui attribuer le droit vous guider durant votre recherche du loup</string>
+        </property>
+        <property name="text">
+         <string>Choisir le chef</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="choose_wolf">
+        <property name="toolTip">
+         <string>Voter pour désigner celui que vous pensez être le loup. Faite attention. Le loup peut être n'importe lequel d'entre vous</string>
+        </property>
+        <property name="text">
+         <string>Voter pour le loup</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="see_card">
+        <property name="toolTip">
+         <string>Voir votre carte</string>
+        </property>
+        <property name="text">
+         <string>Voir sa carte</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="auto_kill">
+        <property name="toolTip">
+         <string>Se suicider et quitter la partie. Vous serez toujours connecté au serveur de jeu sans pouvoir interagir avec les autre joueur. Les morts ne parelent pas. </string>
+        </property>
+        <property name="text">
+         <string>Se suicider</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reload_co">
+        <property name="toolTip">
+         <string>Recharger la connection en cas d'erreur de connection</string>
+        </property>
+        <property name="text">
+         <string>Recharger la connexion</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="disonnection">
+        <property name="toolTip">
+         <string>Se déconnecter et revenir à la page d'accueil. L'adinistrateur ne peut pas se déconnecter durant une partie tant que des joueurs sont encore connectés</string>
+        </property>
+        <property name="text">
+         <string>Revenir à la page d'accueil</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLineEdit" name="chat_input">
+      <property name="placeholderText">
+       <string>Le loup vous observe ....</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="chat_sent_btn">
+      <property name="text">
+       <string>Envoyer</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionRelaod">
+   <property name="text">
+    <string>Relaod</string>
+   </property>
+  </action>
+  <action name="actionAbort">
+   <property name="text">
+    <string>Abort</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>chat_input</sender>
+   <signal>returnPressed()</signal>
+   <receiver>chat_sent_btn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>590</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
