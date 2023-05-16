@@ -23,7 +23,12 @@ public:
     bool isalive();
     Card card();
     quint16 user_tail;
-    int index;
+
+    int index = 0;
+
+    int vote_chef = 0;
+    int vote_loup = 0;
+    int vote_kill = 0;
 
 private:
     QString user_name;

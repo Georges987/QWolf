@@ -40,6 +40,26 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Lancer le jeu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
     </layout>
    </item>
    <item row="1" column="0">
@@ -76,5 +96,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Server</sender>
+   <signal>destroyed()</signal>
+   <receiver>quit_server</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>322</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

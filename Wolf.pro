@@ -11,6 +11,8 @@ CONFIG += c++11
 SOURCES += \
     card.cpp \
     chat.cpp \
+    choose.cpp \
+    cliuser.cpp \
     main.cpp \
     mainscreen.cpp \
     server.cpp \
@@ -20,6 +22,8 @@ SOURCES += \
 HEADERS += \
     card.h \
     chat.h \
+    choose.h \
+    cliuser.h \
     mainscreen.h \
     server.h \
     user.h \
@@ -27,6 +31,7 @@ HEADERS += \
 
 FORMS += \
     chat.ui \
+    choose.ui \
     mainscreen.ui \
     server.ui \
     validation.ui

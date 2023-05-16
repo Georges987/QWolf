@@ -20,12 +20,14 @@ void MainScreen::on_create_server_clicked()
 {
     Server *serve_screen = new Server();
     serve_screen->show();
+    //this->close();
 }
 
 void MainScreen::on_join_server_clicked()
 {
     Validation *valid = new Validation(false);
     valid->show();
+    //this->close();
 }
 
 void MainScreen::on_quit_game_clicked()
